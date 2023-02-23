@@ -1,5 +1,5 @@
 <h1>K-means for Higher Dimensional Data using minkowski distance</h1>
-## Introduction
+<h2> Introduction </h2>
 
 Clustering can be defined as the task of identifying subgroups in the data such that data points in the same
 subgroup (cluster) are very similar while data points in different clusters are very different. One of the most
@@ -17,28 +17,26 @@ of the clusters formed from a given dataset.
 The Silhouette Index is defined as below :-
 
 ```
-S(o) =
-(a(o)−b(o))
-max(a(o), b(o))
+S(o) = (a(o)−b(o))/max(a(o), b(o))
 ```
-where -S(o) is the silhouette coefficient of the data point o.
--a(o) is the average distance between o and all the other data points in the cluster to which o belongs.
--b(o) is the minimum average distance from o to all clusters to which o does not belong.
+where 
+- S(o) is the silhouette coefficient of the data point o.
+- a(o) is the average distance between o and all the other data points in the cluster to which o belongs.
+- b(o) is the minimum average distance from o to all clusters to which o does not belong.
 
 ## Algorithm
 
 ```
 1 Initialize k centroids with random values
 2
-3 for i in range(iterations):
-4 iterate through the items:
-5 Find the closest centroid to the item and label it accordingly
-6 Update the mean by recalculating the mean centroids using all the points in a ...
-particular label
+3   for i in range(iterations):
+4     iterate through the items:
+5     Find the closest centroid to the item and label it accordingly
+6     Update the mean by recalculating the mean centroids using all the points in a particular label
 ```
 
 
-## Difficulties we ran into and some observations
+  <h2> Difficulties we ran into and some observations </h2>
 
 ```
 1.Figuring out the initialisation of centroids:For the clustering algorithm to work correctly we need
